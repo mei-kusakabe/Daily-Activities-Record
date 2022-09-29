@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pp from '../../images/jaf-bg.png'
 import './Cart.css';
 
 
 const Cart = ({ cart }) => {
+    const [breaktime, setBreaktime] = useState([]);
     let total = 0;
     for (const activity of cart) {
         total = total + activity.duration;
+    }
+
+    const handlebreakTimeToList = (breaktime) => {
+        console.log(breaktime);
+        setBreaktime(breaktime)
     }
 
     return (
@@ -30,11 +36,11 @@ const Cart = ({ cart }) => {
             <div className='break-button'>
                 <h4 className='mt-5 fw-bold'>Add a break</h4>
                 <div className='border border-5 rounded mt-4 mx-4 d-flex align-items-center px-5 py-3'>
-                    <button type="button" className="btn btn-secondary rounded-5 mx-2">10s</button>
-                    <button type="button" className="btn btn-secondary rounded-5 mx-2">20s</button>
-                    <button type="button" className="btn btn-secondary rounded-5 mx-2">30s</button>
-                    <button type="button" className="btn btn-secondary rounded-5 mx-2">40s</button>
-                    <button type="button" className="btn btn-secondary rounded-5 mx-2">50s</button>
+                    <button onClick={() => handlebreakTimeToList(10)} type="button" className="btn btn-secondary rounded-5 mx-2">10s</button>
+                    <button onClick={() => handlebreakTimeToList(20)} type="button" className="btn btn-secondary rounded-5 mx-2">20s</button>
+                    <button onClick={() => handlebreakTimeToList(30)} type="button" className="btn btn-secondary rounded-5 mx-2">30s</button>
+                    <button onClick={() => handlebreakTimeToList(40)} type="button" className="btn btn-secondary rounded-5 mx-2">40s</button>
+                    <button onClick={() => handlebreakTimeToList(50)} type="button" className="btn btn-secondary rounded-5 mx-2">50s</button>
                 </div>
             </div>
 
@@ -46,7 +52,7 @@ const Cart = ({ cart }) => {
                 </div>
                 <div className='break-details border border-5 rounded mt-4 mx-3 d-flex align-items-center px-5 py-2'>
                     <p className='pe-4 fs-5'>Break Time: </p>
-                    <p className='pe-4 fw-bold fs-6'> { } sec</p>
+                    <p className='pe-4 fw-bold fs-6'> {breaktime} sec</p>
                 </div>
 
                 <button className='mt-5 me-5 text-center d-flex justify-content-center mx-5 px-5 btn btn-info'>

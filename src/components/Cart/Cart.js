@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import pp from '../../images/jaf-bg.png'
 import './Cart.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Cart = ({ cart }) => {
@@ -14,6 +16,22 @@ const Cart = ({ cart }) => {
         console.log(breaktime);
         setBreaktime(breaktime)
     }
+
+    useEffect(() => {
+        localStorage.setItem('breaktime', JSON.stringify(breaktime));
+    }, [breaktime]);
+
+    // const notify = () => {
+
+    //     // Calling toast method by passing string
+    //     toast('Hello Geeks')
+    // }
+
+    const showToastMessage = () => {
+        toast.success('Activity All done !', {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
 
     return (
         <div className='cart container'>
@@ -55,13 +73,13 @@ const Cart = ({ cart }) => {
                     <p className='pe-4 fw-bold fs-6'> {breaktime} sec</p>
                 </div>
 
-                <button className='mt-5 me-5 text-center d-flex justify-content-center mx-5 px-5 btn btn-info'>
-                    <p className='fw-bold text-center'>Activity Completed</p>
-                </button>
+                <button onClick={showToastMessage} className='mt-5 me-5 text-center d-flex justify-content-center mx-5 px-5 btn btn-info'>
+                    Activity Completed
+                </button> <ToastContainer />
             </div>
 
 
-            <p>Selected Items: {cart.length}</p>
+            {/* <p>Selected Items: {cart.length}</p> */}
             {/* <h5>Grand Total: {grandTotal.toFixed(2)}</h5> */}
         </div>
     );

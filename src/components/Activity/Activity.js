@@ -10,12 +10,12 @@ const Activity = ({ activity, handleAddToList }) => {
         <div className='activity'>
             <img src={img} alt=""></img>
             <div className='activity-info'>
-                <p className='activity-name'>{name}</p>
-                <p><small>About: {description}</small></p>
-                <p><small>Time Required: {duration}</small></p>
+                <p className='activity-name fw-bold'>{name}</p>
+                <p className='text-muted fs-6'><small>{description}</small></p>
+                <p><small><b>Time Required:</b> {duration} sec</small></p>
             </div>
             <button onClick={() => handleAddToList(activity)} className='btn-cart'>
-                <p className='btn-text'>Add to List</p>
+                <p className='btn-text fw-bold'>Add to List</p>
             </button>
         </div>
     );

@@ -3,7 +3,7 @@
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Prayers",
     "description": "Prayer is the first part of my daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/human-hands-open-palm-worship-600w-1936678609.jpg",
     "quantity": 0
   },
@@ -11,7 +11,7 @@
     "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
     "name": "Exercise",
     "description": "Exercise is the Second part of my daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/young-female-workout-before-fitness-600w-539919946.jpg",
     "quantity": 0
   },
@@ -19,7 +19,7 @@
     "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
     "name": "Reading Newspaper",
     "description": "Reading Newspaper is the one of my part of daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/portrait-woman-cup-coffee-reading-600w-1115998157.jpg",
     "quantity": 0
   },
@@ -27,7 +27,7 @@
     "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
     "name": "Study",
     "description": "Study is the one of my part of daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/portrait-pretty-young-woman-studying-600w-1062070967.jpg",
     "quantity": 0
   },
@@ -35,7 +35,7 @@
     "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
     "name": "Eating",
     "description": "Eating is the one of my part of daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/close-portrait-satisfied-pretty-girl-600w-766032388.jpg",
     "quantity": 0
   },
@@ -43,7 +43,7 @@
     "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
     "name": "Sleep",
     "description": "Sleep is the one of my part of daily activity",
-    "duration": "300s",
+    "duration": 300,
     "img": "https://image.shutterstock.com/image-photo/top-above-high-angle-view-600w-1910148166.jpg",
     "quantity": 0
   }

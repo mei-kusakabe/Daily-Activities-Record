@@ -17,5 +17,9 @@
 }
 
 .cart-container {
-    background-color: rgba(255, 153, 0, 0.3);
+    /* background-color: rgba(255, 153, 0, 0.3); */
+    /* background-color: #edb1f1; */
+    background-color: #FFFF;
+    border: 5px solid bisque;
+
 }

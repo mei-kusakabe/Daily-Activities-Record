@@ -1,0 +1,38 @@
+.cart {
+    position: sticky;
+    top: 0;
+    padding: 30px 20px;
+}
+
+.personal-info {
+    display: flex;
+}
+
+.personal-info img {
+
+    width: 88px;
+    height: 88px;
+
+}
+
+
+.btn-cart2 {
+    width: 70%;
+    background: #d59bf6;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cart2 .btn-text {
+    margin-right: 5px;
+
+}
+
+.btn-cart2:hover {
+    background-color: orange;
+}

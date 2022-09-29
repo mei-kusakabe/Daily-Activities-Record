@@ -23,8 +23,8 @@ const Activities = () => {
 
     }
     return (
-        <div>
-            <p>Select Today's Activities</p>
+        <div className='container'>
+            <p className='fs-4 fw-bold'>Select Today's Activities</p>
             <div className='activities-container'>
 
                 <div className="activity-container">

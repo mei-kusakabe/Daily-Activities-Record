@@ -1,6 +1,7 @@
 import React from 'react';
 import './Activity.css';
 
+
 const Activity = ({ activity, handleAddToList }) => {
     // console.log(props.activity)
     // const { activity, handleAddToList } = props

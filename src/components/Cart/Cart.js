@@ -4,13 +4,11 @@ import './Cart.css';
 
 
 const Cart = ({ cart }) => {
-
     let total = 0;
-    let shipping = 0;
-    let quantity = 0;
     for (const activity of cart) {
         total = total + activity.duration;
     }
+
     return (
         <div className='cart'>
             <div className='personal-info'>
@@ -30,11 +28,11 @@ const Cart = ({ cart }) => {
             </div>
             <h4 className='mt-5 fw-bold'>Add a break</h4>
             <div className='border border-5 rounded mt-4 mx-4 d-flex align-items-center px-5 py-3'>
-                <button type="button" class="btn btn-secondary rounded-5 mx-2">10s</button>
-                <button type="button" class="btn btn-secondary rounded-5 mx-2">20s</button>
-                <button type="button" class="btn btn-secondary rounded-5 mx-2">30s</button>
-                <button type="button" class="btn btn-secondary rounded-5 mx-2">40s</button>
-                <button type="button" class="btn btn-secondary rounded-5 mx-2">50s</button>
+                <button type="button" className="btn btn-secondary rounded-5 mx-2">10s</button>
+                <button type="button" className="btn btn-secondary rounded-5 mx-2">20s</button>
+                <button type="button" className="btn btn-secondary rounded-5 mx-2">30s</button>
+                <button type="button" className="btn btn-secondary rounded-5 mx-2">40s</button>
+                <button type="button" className="btn btn-secondary rounded-5 mx-2">50s</button>
             </div>
             <h4 className='mt-5 fw-bold'>Activity Details: </h4>
             <div className='activity-details border border-5 rounded mt-4 mx-3 d-flex align-items-center px-5 py-2'>
@@ -50,7 +48,6 @@ const Cart = ({ cart }) => {
                 <p className='fw-bold text-center'>Activity Completed</p>
             </button>
             <p>Selected Items: {cart.length}</p>
-            <p>Total activity time: ${total}</p>
             {/* <h5>Grand Total: {grandTotal.toFixed(2)}</h5> */}
         </div>
     );

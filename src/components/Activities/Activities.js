@@ -108,7 +108,7 @@ const Activities = () => {
                                     <button className="accordion-button fw-bold text-black fs-4 collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
                                         aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                        What else does UseEffect without data loading through API?
+                                        What else does UseEffect do  except data loading through API?
                                     </button>
                                 </h2>
                                 <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse"

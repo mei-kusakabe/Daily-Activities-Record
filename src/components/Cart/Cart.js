@@ -6,26 +6,46 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Cart = ({ cart }) => {
+    // const [breaktime, setBreaktime] = useState([{ breaktime: breaktime }]);
     const [breaktime, setBreaktime] = useState([]);
+
+
+    // let newbreaktime = [...breaktime, breaktime];
+    // setBreaktime(breaktime);
+
+    useEffect(() => {
+        const breaktime = localStorage.getItem('breaktime');
+        if (breaktime) {
+            setBreaktime(JSON.parse(breaktime));
+        }
+
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('breaktime', JSON.stringify(breaktime));
+    });
+
+    // useEffect(() => {
+    //     localStorage.setItem('breaktime', JSON.stringify(breaktime));
+    // }, [breaktime]);
+
+    // if (breaktime) {
+    //     setBreaktime(breaktime);
+    // }
+
+    const handlebreakTimeToList = (breaktime) => {
+
+
+        console.log(breaktime);
+        setBreaktime(breaktime)
+
+    }
+
     let total = 0;
     for (const activity of cart) {
         total = total + activity.duration;
     }
 
-    const handlebreakTimeToList = (breaktime) => {
-        console.log(breaktime);
-        setBreaktime(breaktime)
-    }
-
-    useEffect(() => {
-        localStorage.setItem('breaktime', JSON.stringify(breaktime));
-    }, [breaktime]);
-
-    // const notify = () => {
-
-    //     // Calling toast method by passing string
-    //     toast('Hello Geeks')
-    // }
 
     const showToastMessage = () => {
         toast.success('Activity All done !', {

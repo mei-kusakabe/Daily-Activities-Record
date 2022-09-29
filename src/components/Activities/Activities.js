@@ -23,7 +23,7 @@ const Activities = () => {
         setCart(newCart)
     }
     return (
-        <div className='container m-0 p-0'>
+        <div className='container m-0 p-0 activities'>
             <p className='fs-4 fw-bold ms-5'>Select Today's Activities</p>
             <div className='activities-container'>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div className='container'>
+        <div className='container faq'>
             <section className="faq container mt-5" id="faq">
                 <div className="faq-header text-center">
                     <h1 className="display-5 fw-bold">Frequently Asked Questions

@@ -18,12 +18,9 @@ const Activities = () => {
     }, [])
 
     const handleAddToList = (activity) => {
-        // addToDb(activity.id)
         console.log(activity);
-
         let newCart = [...cart, activity];
         setCart(newCart)
-
     }
     return (
         <div className='container m-0 p-0'>
@@ -44,7 +41,7 @@ const Activities = () => {
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <section className="faq container mt-5" id="faq">
                     <div className="faq-header text-center">
                         <h1 className="display-5 fw-bold">Frequently Asked Questions
@@ -126,7 +123,7 @@ const Activities = () => {
                     </section>
                 </section>
 
-            </div>
+            </div> */}
         </div >
     );
 };

@@ -9,37 +9,24 @@ const Cart = ({ cart }) => {
     // const [breaktime, setBreaktime] = useState([{ breaktime: breaktime }]);
     const [breaktime, setBreaktime] = useState([]);
 
+    const handlebreakTimeToList = (breaktime) => {
 
-    // let newbreaktime = [...breaktime, breaktime];
-    // setBreaktime(breaktime);
+        console.log(breaktime);
+        setBreaktime(breaktime)
+        localStorage.setItem('breaktime', JSON.stringify(breaktime));
+
+    }
 
     useEffect(() => {
         const breaktime = localStorage.getItem('breaktime');
         if (breaktime) {
             setBreaktime(JSON.parse(breaktime));
         }
+        else {
+            setBreaktime(0);
+        }
 
     }, []);
-
-    useEffect(() => {
-        localStorage.setItem('breaktime', JSON.stringify(breaktime));
-    });
-
-    // useEffect(() => {
-    //     localStorage.setItem('breaktime', JSON.stringify(breaktime));
-    // }, [breaktime]);
-
-    // if (breaktime) {
-    //     setBreaktime(breaktime);
-    // }
-
-    const handlebreakTimeToList = (breaktime) => {
-
-
-        console.log(breaktime);
-        setBreaktime(breaktime)
-
-    }
 
     let total = 0;
     for (const activity of cart) {
@@ -97,8 +84,6 @@ const Cart = ({ cart }) => {
                     Activity Completed
                 </button> <ToastContainer />
             </div>
-
-
             {/* <p>Selected Items: {cart.length}</p> */}
             {/* <h5>Grand Total: {grandTotal.toFixed(2)}</h5> */}
         </div>

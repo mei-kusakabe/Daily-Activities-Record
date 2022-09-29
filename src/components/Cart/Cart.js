@@ -57,9 +57,8 @@ const Cart = ({ cart }) => {
 
                 </div>
             </div>
-
-            <div className='break-button'>
-                <h4 className='mt-5 fw-bold'>Add a break</h4>
+            <div className='break-button container'>
+                <h4 className='mt-5 fw-bold'>Add a break: </h4>
                 <div className='border border-5 rounded mt-4 mx-4 d-flex align-items-center px-5 py-3'>
                     <button onClick={() => handlebreakTimeToList(10)} type="button" className="btn btn-secondary rounded-5 mx-2">10s</button>
                     <button onClick={() => handlebreakTimeToList(20)} type="button" className="btn btn-secondary rounded-5 mx-2">20s</button>
@@ -68,20 +67,18 @@ const Cart = ({ cart }) => {
                     <button onClick={() => handlebreakTimeToList(50)} type="button" className="btn btn-secondary rounded-5 mx-2">50s</button>
                 </div>
             </div>
-
-            <div className='activity-details'>
+            <div className='activity-details container'>
                 <h4 className='mt-5 fw-bold'>Activity Details: </h4>
                 <div className='activity-details border border-5 rounded mt-4 mx-3 d-flex align-items-center px-5 py-2'>
                     <p className='pe-4 fs-5'>Activity Time: </p>
                     <p className='pe-4 fw-bold fs-6'> {total} sec</p>
                 </div>
-                <div className='break-details border border-5 rounded mt-4 mx-3 d-flex align-items-center px-5 py-2'>
+                <div className='container break-details border border-5 rounded mt-4 mx-3 d-flex align-items-center px-5 py-2'>
                     <p className='pe-4 fs-5'>Break Time: </p>
                     <p className='pe-4 fw-bold fs-6'> {breaktime} sec</p>
                 </div>
-
                 <button onClick={showToastMessage} className='mt-5 me-5 text-center d-flex justify-content-center mx-5 px-5 btn btn-info'>
-                    Activity Completed
+                    <p className='fw-bold'> Activity Completed</p>
                 </button> <ToastContainer />
             </div>
             {/* <p>Selected Items: {cart.length}</p> */}

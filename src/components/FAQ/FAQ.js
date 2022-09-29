@@ -73,9 +73,12 @@ const FAQ = () => {
                                 aria-labelledby="panelsStayOpen-headingThree">
                                 <div className="accordion-body">
                                     <h6 className="text-muted">
-                                        By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates.
-                                        In this effect, we set the document title, but we could also perform data fetching or call some other imperative API.
-
+                                        <ul>
+                                            <li> Running on state change: validating input field.</li>
+                                            <li> Running on state change: live filtering.</li>
+                                            <li>Running on state change: trigger animation on new array value.</li>
+                                            <li>Running on props change: update paragraph list on fetched API data update.</li>
+                                        </ul>
                                     </h6>
                                 </div>
                             </div>

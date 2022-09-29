@@ -8,7 +8,7 @@ const Activity = ({ activity, handleAddToList }) => {
     const { name, img, description, duration } = activity
     // console.log(props)
     return (
-        <div className='activity'>
+        <div className='activity container m-0 p-0'>
             <img src={img} alt=""></img>
             <div className='activity-info'>
                 <p className='activity-name fw-bold'>{name}</p>

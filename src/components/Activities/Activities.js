@@ -26,8 +26,8 @@ const Activities = () => {
 
     }
     return (
-        <div className='container'>
-            <p className='fs-4 fw-bold'>Select Today's Activities</p>
+        <div className='container m-0 p-0'>
+            <p className='fs-4 fw-bold ms-5'>Select Today's Activities</p>
             <div className='activities-container'>
 
                 <div className="activity-container">
@@ -66,14 +66,11 @@ const Activities = () => {
                                     aria-labelledby="panelsStayOpen-headingOne">
                                     <div className="accordion-body">
                                         <h6 className="text-muted">
-                                            Flexbox was designed specifically for one-dimensional layouts, while CSS Grid is
-                                            engineered to enable two-dimensional layouts.
-                                            Flexbox offers greater control over alignment and space distribution between
-                                            items. Being one-dimensional, Flexbox only deals with either columns or
-                                            rows.Grid has two-dimension layout capabilities which allow flexible widths as a
-                                            unit of length. This compensates for the limitations in Flex.
-                                            Flexbox is content based,it listens to the content and adjusts to it.
-                                            Grid is container based and operates more on the layout level.
+                                            ReactJS divides the UI into isolated reusable pieces of code known as components.
+                                            React components work similarly to JavaScript functions as they accept arbitrary inputs
+                                            called properties or props. It's possible to have as many components as necessary without
+                                            cluttering your code.
+                                            Returned React elements determine how the UI will look at the client end.
                                         </h6>
                                     </div>
                                 </div>
@@ -83,7 +80,7 @@ const Activities = () => {
                                     <button className="accordion-button fw-bold text-black fs-4 collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
                                         aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                        What is the difference between props and states?
+                                        What is the difference between props and state?
                                     </button>
 
                                 </h2>
@@ -91,18 +88,17 @@ const Activities = () => {
                                     aria-labelledby="panelsStayOpen-headingTwo">
                                     <div className="accordion-body">
                                         <h6 className="text-muted">
-                                            The Bootstrap framework can best be described as a component-based framework.
-                                            Component-based CSS frameworks are made up of predefined components, or parts,
-                                            that can be used to style HTML, making responsive website development faster and
-                                            easier.
-                                            On the other hand, Tailwind CSS can best be described as a “utility-first”
-                                            framework. Utility-first
-                                            frameworks are composed of small, simple classes that can be applied to elements
-                                            to create a user interface or UI. On the surface, using Tailwind doesn’t look
-                                            too different from writing inline styles. However, what this framework offers is
-                                            customizability. Instead of being restrained by the premade components from
-                                            Bootstrap, we can essentially create our own UI with Tailwind to meet our
-                                            project’s needs
+                                            The key difference between props and state is that state is internal and controlled by the component
+                                            itself while props are external and controlled by whatever renders the component.
+                                            <ul>
+                                                <li>Props- The Data is passed from one component to another. And
+                                                    State-  The Data is passed within the component only.</li>
+                                                <li>Props-It is Immutable (cannot be modified).
+                                                    State- It is Mutable ( can be modified).</li>
+                                                <li>Props can be used with state and functional components.And
+                                                    State can be used only with the state components/class component (Before 16.0).</li>
+                                                <li>Props are read-only. And State is both read and write.</li>
+                                            </ul>
                                         </h6>
                                     </div>
                                 </div>
@@ -119,21 +115,8 @@ const Activities = () => {
                                     aria-labelledby="panelsStayOpen-headingThree">
                                     <div className="accordion-body">
                                         <h6 className="text-muted">
-                                            In CSS, the term "box model" is used when talking about design and layout.
-                                            The CSS box model is essentially a box that wraps around every HTML element. It
-                                            consists of: margins, borders, padding, and the actual content.
-                                            <ul>
-                                                <li><b>Content - </b>The content of the box, where text and images appear
-                                                </li>
-                                                <li><b>Padding -</b>Clears an area around the content. The padding is
-                                                    transparent
-                                                </li>
-                                                <li><b>Border -</b> A border that goes around the padding and content
-                                                </li>
-                                                <li><b>Margin - </b>Clears an area outside the border. The margin is
-                                                    transparent
-                                                </li>
-                                            </ul>
+                                            By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates.
+                                            In this effect, we set the document title, but we could also perform data fetching or call some other imperative API.
 
                                         </h6>
                                     </div>
@@ -144,7 +127,7 @@ const Activities = () => {
                 </section>
 
             </div>
-        </div>
+        </div >
     );
 };
 

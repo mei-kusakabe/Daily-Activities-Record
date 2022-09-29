@@ -5,9 +5,9 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className="header m-0-p-0">
             <img src={logo} alt="" />
-            <h2>Daily-Activities-Record</h2>
+            <h2 className='text-center mt-5'>Daily-Activities-Record</h2>
 
         </div>
     );
